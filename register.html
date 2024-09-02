@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Navbar Styles */
+        .navbar {
+            background: skyblue;
+            color: #fff;
+            padding: 1em;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 100px;
+            gap: 10px;
+        }
+
+        .logo a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .logo img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            margin: 0 1em;
+        }
+
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5em;
+            padding: 1vw;
+            border-radius: 10%;
+        }
+
+        .nav-menu a:hover {
+            background-color: aliceblue;
+            color: black;
+        }
+
+        .hamburger-menu {
+            display: none;
+        }
+
+        .textbox{
+            height: 45px;
+        }
+        .textbox input{
+            height: 30px;
+            width: 250px;
+        }
+        .form button{
+            height: 40px;
+            width: 150px;
+             
+             
+        }
+
+        @media (max-width: 768px) {
+            .logo{
+                margin-left: 10%;
+            }
+            .hamburger-menu{
+                margin-right: 15%;
+            }
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: #333;
+                width: 100%;
+            }
+
+            .nav-menu.active {
+                display: flex;
+                height: 100px;
+                justify-content: center;
+                margin-top: 10%;
+            }
+
+            .hamburger-menu {
+                display: block;
+                cursor: pointer;
+            }
+
+            .hamburger-menu span {
+                display: block;
+                width: 25px;
+                height: 3px;
+                background: #fff;
+                margin: 5px 0;
+            }
+
+
+        }
+
+        /* Adjust for Navbar and other content */
+        
+
+        body {
+            margin-top: 60px;
+            padding: 0;
+            background: linear-gradient(to right, #e0eafc, #cfdef3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 2em;
+        }
+
+        .register-box {
+            background: #ffffff;
+            padding: 2em;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .register-box h2 {
+            margin-bottom: 1.5em;
+            color: #333;
+            font-size: 1.8em;
+            font-weight: 400;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="424780329_2612928038884323_1781699919436418202_n.jpg" alt="">
+                </a>
+                <a class="cg" href="index.html">Choudhary Garments</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="register-box">
+            <h2>Register</h2>
+            <form class="form" action="#">
+                <div class="textbox">
+                    <input type="text" placeholder="Email" required>
+                </div>
+                <div class="textbox">
+                    <input type="text" placeholder="Username" required>
+                </div>
+                <div class="textbox">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <div class="textbox">
+                    <input type="password" placeholder="Confirm Password" required>
+                </div>
+                <div class="textbox">
+                    <input type="text" placeholder="Address" required>
+                </div>
+                <div class="textbox">
+                    <input type="text" placeholder="State" required>
+                </div>
+                <div class="textbox">
+                    <input type="text" placeholder="Country" required>
+                </div>
+                <div class="textbox">
+                    <input type="text" placeholder="Pincode" required>
+                </div>
+                <div class="textbox">
+                    <input type="text" placeholder="Mobile Number" required>
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <p class="login-link">Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const navMenu = document.querySelector('.nav-menu');
+
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        });
+
+
+    </script>
+
+</body>
+
+</html>

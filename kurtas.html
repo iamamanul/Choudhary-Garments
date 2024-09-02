@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurtas</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+        .section1 {
+            position: relative;
+            height: 20vh;
+            overflow: hidden;
+        }
+
+        /* .backvideo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    z-index: -1;
+} */
+
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            padding: 0 20px;
+            gap: 30%;
+
+            background-color: skyblue;
+        }
+
+        .logo {
+            display: flex;
+            gap: 7%;
+            align-items: center;
+
+        }
+
+        .logo img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            box-shadow: 0.2rem 0.2rem 0.2rem black;
+        }
+
+        .logo .name {
+            font-size: 30px;
+            font-family: "Poppins", system-ui;
+            font-weight: 600;
+
+            color: white;
+
+            text-shadow: 0.2rem 0.2rem 0.2rem black;
+        }
+
+        .navcontent {
+            display: flex;
+            gap: 10%;
+            padding: 2%;
+            font-size: 25px;
+            justify-content: center;
+            align-items: center;
+        }
+        .navcontent a:hover{
+            background-color: aliceblue;
+            border-radius: 10%;
+            color: #000;
+            text-shadow: none;
+        }
+
+        .navcontent a {
+            padding: 10px;
+            font-family: "Poppins", system-ui;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+
+            color: white;
+
+            text-shadow:
+                -1px -1px 2px #000,
+                1px -1px 2px #000,
+                -1px 1px 2px #000,
+                1px 1px 2px #000;
+            /* Border color */
+        }
+
+        .navcontent svg{
+            height: 40px;
+            width: 40px;
+            position: absolute;
+            z-index: 2000;
+            border: 5px solid black;
+            padding: 10px;
+            background-color: white;
+            border-radius: 30%;
+            right: 10vw;
+            cursor: pointer;
+        }
+        .navcontent svg:hover{
+            background-color: #eaa7c8;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-direction: column;
+            margin-bottom: 5%;
+
+
+        }
+
+        .main a {
+            height: 60vh;
+            width: 90%;
+            background-color: aliceblue;
+            border: 5px solid black;
+            border-top-left-radius: 5%;
+            border-bottom-right-radius: 5%;
+            border-style: double;
+
+
+        }
+
+
+
+
+
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 2rem;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-right: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #555;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-section p {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section p strong {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 1rem;
+            border-top: 1px solid #555;
+            padding-top: 1rem;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                gap: 70px;
+            }
+
+            .navcontent {
+                margin-right: 30vw;
+                gap: 0.5px;
+                font-size: 13px;
+            }
+
+            .two {
+                display: none;
+            }
+
+            .logo img {
+                height: 40px;
+                width: 50%;
+            }
+
+            .logo {
+
+                height: 15vh;
+                margin-left: 10vw;
+
+            }
+
+            .logo .name {
+                font-size: 15px;
+            }
+            .navcontent svg{
+                height: 20px;
+                width: 20px;
+                margin-right: 8vw;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+    <div class="section1">
+        <nav>
+            <div class="logo">
+                <img src="424780329_2612928038884323_1781699919436418202_n.jpg" alt="">
+                <div class="name">Choudhary Garments</div>
+            </div>
+
+
+            <div class="navcontent">
+                <a class="one" href="index.html">Home</a>
+                <a class="three" href="#contact">Contact</a>
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+            </div>
+
+        </nav>
+    </div>
+
+    <div class="main">
+        <a href="">
+
+        </a>
+        <a href="">
+
+        </a>
+        <a href="">
+
+        </a>
+        <a href="">
+
+        </a>
+        <a href="">
+
+        </a>
+        <a href="">
+
+        </a>
+    </div>
+
+
+
+
+
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section contact-info">
+                <h3>Contact Us</h3>
+                <p><strong>Address 1:</strong>
+                    Building No- 161/14 - A, Main Road, Jamia Nagar,<br>
+                    Delhi - 110025 (Joga Bai, Batala House Chowk)</p>
+                <br>
+                <p><strong>Address 2:</strong>
+                    G-52, Kalindi Kunj Rd, Shaheen Bagh,<br>
+                    Okhla, New Delhi, Delhi 110025</p>
+                <br>
+                <p><strong>Phone:</strong> +91 7947116619</p>
+                <br>
+                <p><strong>Email:</strong> contact@choudharygarments.com</p>
+            </div>
+
+            <div class="footer-section business-info">
+                <h3>Business Details</h3>
+                <p><strong>Legal Name:</strong> Choudhary Garments</p>
+                <p><strong>Year of Establishment:</strong> 2000</p>
+                <p><strong>No of Employees:</strong> 10 - 100</p>
+                <p><strong>Turn Over:</strong> 1 - 5 Crores</p>
+                <p><strong>GSTIN:</strong> 07BGLPS3892Q1Z8</p>
+                <p><strong>Mode of Payment:</strong> Cash</p>
+                <p><strong>Timings:</strong><br>
+                    Mon - Sat: 11:00 am - 10:00 pm<br>
+                    Sun: 11:00 am - 10:00 pm</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Choudhary Garments. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+
+    <script>
+        document.querySelector('.three').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.querySelector('#contact').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    
+
+    
+
+
+</body>
+
+</html>

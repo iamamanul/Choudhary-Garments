@@ -1,0 +1,161 @@
+/* Navbar Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    background-color: aliceblue;
+    font-family: 'Roboto', sans-serif;
+}
+.navbar {
+    background: skyblue;
+    color: #fff;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100px;
+    gap: 10px;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.logo img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0 1em;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 1vw;
+    border-radius: 10%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-menu a:hover {
+    background-color: aliceblue;
+    color: black;
+}
+.hamburger-menu {
+    display: none;
+}
+
+.textbox{
+    height: 45px;
+    
+
+}
+.textbox input{
+    height: 30px;
+    width: 250px;
+    
+}
+.form button{
+    height: 40px;
+    width: 150px;
+}
+
+@media (max-width: 768px) {
+    .logo{
+        margin-left: 10%;
+    }
+    .hamburger-menu{
+        margin-right: 15%;
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #333;
+        width: 100%;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        height: 100px;
+        justify-content: center;
+        margin-top: 10%;
+    }
+
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger-menu span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        margin: 5px 0;
+    }
+    body {
+        margin-top: 40%; /* Adjust based on the navbar height */
+      
+    }
+}
+
+/* Adjust for Navbar and other content */
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2em;
+}
+
+.login-box {
+    background: #ffffff;
+    padding: 2em;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 1.5em;
+    color: #333;
+    font-size: 1.8em;
+    font-weight: 400;
+}
